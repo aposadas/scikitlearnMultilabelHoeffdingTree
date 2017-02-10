@@ -81,7 +81,7 @@ class Node():
 		c = math.log(self.number_of_classes)
 		hoeffding_bound = self.compute_hoeffding_bound(c,self.delta, self.n)
 		entropy_Xa_Xb = self.first - self.second
-		if ((entropy_Xa_Xb > hoeffding_bound) | (hoeffding_bound < tie_breaking) ): 
+		if (entropy_Xa_Xb > hoeffding_bound): 
 			self.split(self.column_name_first)
 
 		
